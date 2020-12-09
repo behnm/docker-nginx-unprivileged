@@ -1,0 +1,10 @@
+stages:
+- name: test
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: behnam:v1
+      registry: 127.0.0.1:34686
+timeout: 60
+notification: {}
